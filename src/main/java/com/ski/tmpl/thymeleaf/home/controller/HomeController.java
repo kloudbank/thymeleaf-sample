@@ -1,21 +1,23 @@
 package com.ski.tmpl.thymeleaf.home.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.ski.tmpl.thymeleaf.board.domain.Board;
+import com.ski.tmpl.thymeleaf.board.service.BoardService;
+
 @Controller
 public class HomeController {
 	
-	public HomeController() {
-
-	}
+	@Autowired
+	private BoardService boardService;
 	
 	@GetMapping({"","/","/index","main"})
 	public String index(HttpServletRequest request, Model model) {
@@ -24,7 +26,7 @@ public class HomeController {
 			return "sign";
 		}
 		
-		List<Object> boardList = new ArrayList<Object>();
+		List<Board> boardList = this.boardService.getBoardAll();
 		model.addAttribute(boardList);
 		
 		return "board";
@@ -42,14 +44,14 @@ public class HomeController {
 		return "sign";
 	}
 
-	@GetMapping("/product")
+	@GetMapping("/board")
 	public String product(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("username") == null) {
 			return "sign";
 		}
 		
-		List<Object> boardList = new ArrayList<Object>();
+		List<Board> boardList = this.boardService.getBoardAll();
 		model.addAttribute(boardList);
 		
 		return "board";
