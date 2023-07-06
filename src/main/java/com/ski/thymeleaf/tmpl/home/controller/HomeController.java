@@ -29,7 +29,7 @@ public class HomeController {
 		List<Board> boardList = this.boardService.getBoardAll();
 		model.addAttribute(boardList);
 		
-		return "board";
+		return "index";
 	}
 
 	@GetMapping("/logout")
@@ -45,7 +45,7 @@ public class HomeController {
 	}
 
 	@GetMapping("/board")
-	public String product(HttpServletRequest request, Model model) {
+	public String board(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("username") == null) {
 			return "sign";
@@ -56,43 +56,29 @@ public class HomeController {
 		
 		return "board";
 	}
-	
-	@GetMapping("/about")
-	public String about(HttpServletRequest request, Model model) {
+
+	@GetMapping("/dashboard")
+	public String dashboard(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("username") == null) {
 			return "sign";
 		}
 		
-		return "about";
-	}
-	
-	@GetMapping("/blog")
-	public String blog(HttpServletRequest request, Model model) {
-		HttpSession session = request.getSession();
-		if(session.getAttribute("username") == null) {
-			return "sign";
-		}
+		List<Board> boardList = this.boardService.getBoardAll();
+		model.addAttribute(boardList);
 		
-		return "blog";
+		return "dashboard";
 	}
 
-	@GetMapping("/blog-detail")
-	public String blogDetail(HttpServletRequest request, Model model) {
-		HttpSession session = request.getSession();
-		if(session.getAttribute("username") == null) {
-			return "sign";
-		}
-		
-		return "blog-detail";
-	}
-	
 	@GetMapping("/contact")
 	public String contact(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("username") == null) {
 			return "sign";
 		}
+		
+		List<Board> boardList = this.boardService.getBoardAll();
+		model.addAttribute(boardList);
 		
 		return "contact";
 	}
