@@ -1,9 +1,9 @@
-package com.ski.tmpl.thymeleaf.board.controller;
+package com.ski.tmpl.board.controller;
 
 import java.util.List;
 
-import com.ski.tmpl.thymeleaf.board.domain.Board;
-import com.ski.tmpl.thymeleaf.board.service.BoardService;
+import com.ski.tmpl.board.domain.Board;
+import com.ski.tmpl.board.service.BoardService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

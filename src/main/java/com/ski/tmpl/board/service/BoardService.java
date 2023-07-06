@@ -1,10 +1,10 @@
-package com.ski.tmpl.thymeleaf.board.service;
+package com.ski.tmpl.board.service;
 
 import java.util.Arrays;
 import java.util.List;
 
-import com.ski.tmpl.thymeleaf.config.RestService;
-import com.ski.tmpl.thymeleaf.board.domain.Board;
+import com.ski.tmpl.config.RestService;
+import com.ski.tmpl.board.domain.Board;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

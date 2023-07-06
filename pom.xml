@@ -8,8 +8,8 @@
 		<version>3.1.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ski.tmpl</groupId>
-	<artifactId>thymeleaf-sample</artifactId>
+	<groupId>com.ski</groupId>
+	<artifactId>tmpl</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>thymeleaf</name>
 	<description>Demo project for Spring Boot</description>

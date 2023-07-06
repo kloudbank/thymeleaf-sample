@@ -1,4 +1,4 @@
-package com.ski.tmpl.thymeleaf.account.domain;
+package com.ski.tmpl.account.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.ski.tmpl.thymeleaf;
+package com.ski.tmpl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

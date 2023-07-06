@@ -1,4 +1,4 @@
-package com.ski.tmpl.thymeleaf.board.domain;
+package com.ski.tmpl.board.domain;
 
 import java.time.LocalDateTime;
 

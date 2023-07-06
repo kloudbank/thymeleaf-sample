@@ -1,4 +1,4 @@
-package com.ski.tmpl.thymeleaf.account.controller;
+package com.ski.tmpl.account.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ski.tmpl.thymeleaf.account.domain.Account;
-import com.ski.tmpl.thymeleaf.account.service.AccountService;
+import com.ski.tmpl.account.domain.Account;
+import com.ski.tmpl.account.service.AccountService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
