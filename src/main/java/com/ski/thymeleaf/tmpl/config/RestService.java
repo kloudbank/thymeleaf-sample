@@ -1,4 +1,4 @@
-package com.ski.tmpl.config;
+package com.ski.thymeleaf.tmpl.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;

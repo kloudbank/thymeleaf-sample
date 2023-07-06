@@ -1,4 +1,4 @@
-package com.ski.tmpl.home.controller;
+package com.ski.thymeleaf.tmpl.home.controller;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.ski.tmpl.board.domain.Board;
-import com.ski.tmpl.board.service.BoardService;
+import com.ski.thymeleaf.tmpl.board.domain.Board;
+import com.ski.thymeleaf.tmpl.board.service.BoardService;
 
 @Controller
 public class HomeController {

@@ -1,4 +1,4 @@
-package com.ski.tmpl.config;
+package com.ski.thymeleaf.tmpl.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,8 +1,8 @@
-package com.ski.tmpl.account.service;
+package com.ski.thymeleaf.tmpl.account.service;
 
 import org.springframework.stereotype.Service;
 
-import com.ski.tmpl.account.domain.Account;
+import com.ski.thymeleaf.tmpl.account.domain.Account;
 
 @Service
 public class AccountService {

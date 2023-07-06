@@ -1,15 +1,15 @@
-package com.ski.tmpl.board.service;
+package com.ski.thymeleaf.tmpl.board.service;
 
 import java.util.Arrays;
 import java.util.List;
-
-import com.ski.tmpl.config.RestService;
-import com.ski.tmpl.board.domain.Board;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
+
+import com.ski.thymeleaf.tmpl.board.domain.Board;
+import com.ski.thymeleaf.tmpl.config.RestService;
 
 @Service
 public class BoardService {
