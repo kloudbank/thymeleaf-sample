@@ -1,4 +1,4 @@
-package com.ski.tmpl;
+package com.ski.thymeleaf.tmpl;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
