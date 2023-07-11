@@ -14,8 +14,8 @@ import com.ski.thymeleaf.tmpl.config.RestService;
 @Service
 public class BoardService {
 
-	@Value("${api.board.url}")
-	private String apiBoardUrl;
+	@Value("${api.springboot.url}")
+	private String apiUrl;
 	
 	@Autowired
 	private RestService<Board[]> restBoardArrayService;
@@ -23,6 +23,6 @@ public class BoardService {
 	public BoardService() {}
 	
 	public List<Board> getBoardAll(){
-		return Arrays.asList(this.restBoardArrayService.get(String.format("%s%s", apiBoardUrl, "/v1/board/all"), HttpHeaders.EMPTY,Board[].class).getBody());
+		return Arrays.asList(this.restBoardArrayService.get(String.format("%s%s", apiUrl, "/v1/board/all"), HttpHeaders.EMPTY,Board[].class).getBody());
 	}
 }

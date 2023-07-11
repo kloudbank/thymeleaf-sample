@@ -8,9 +8,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Account {
-	
-	private long id;
 	private String userid;
 	private String username;
-	private String password;	
+	private String password;
 }

@@ -28,14 +28,12 @@ public class AccountController {
 		HttpSession session = request.getSession();
 
 		if (session.getAttribute("username") != null) {
-			session.removeAttribute("id");
 			session.removeAttribute("username");
 		}
 
 		Account resultAccount = this.accountService.login(account);
 		
 		if(resultAccount.getUsername() != null) {
-			session.setAttribute("id", resultAccount.getId());
 			session.setAttribute("username", resultAccount.getUsername());
 		} else {
 			throw new Exception();
