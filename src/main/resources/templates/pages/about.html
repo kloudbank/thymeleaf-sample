@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- Default Layout Import-->
+<html lang="en"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{common/layouts/defaultLayout}"
+	layout:fragment="Content"
+>
+<body>
+	<!-- Sidebar-->
+	<div th:replace="common/fragments/sidebar :: SidebarFragment"></div>
+	
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<h1 class="mt-4">About</h1>
+		</div>
+	</div>
+</body>
+</html>

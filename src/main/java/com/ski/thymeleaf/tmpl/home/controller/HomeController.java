@@ -18,18 +18,26 @@ public class HomeController {
 	
 	@Autowired
 	private BoardService boardService;
+
+	String pagePrefix = "pages/";
 	
-	@GetMapping({"","/","/index","main"})
+	@GetMapping({"","/","/index","/main"})
 	public String index(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("username") == null) {
-			return "sign";
+			return pagePrefix + "sign";
 		}
 		
 		List<Board> boardList = this.boardService.getBoardAll();
 		model.addAttribute(boardList);
 		
-		return "index";
+		return pagePrefix + "index";
+	}
+
+	@GetMapping("/sign")
+	public String signin(Model model) {
+		
+		return pagePrefix + "sign";
 	}
 
 	@GetMapping("/logout")
@@ -37,49 +45,43 @@ public class HomeController {
 		HttpSession session = request.getSession();
 		
 		if (session.getAttribute("username") != null) {
-			session.removeAttribute("userid");
 			session.removeAttribute("username");
 		}
 		
-		return "sign";
+		return "redirect:sign?";
+		// return pagePrefix + "sign";
 	}
 
 	@GetMapping("/board")
 	public String board(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("username") == null) {
-			return "sign";
+			return pagePrefix + "sign";
 		}
 		
 		List<Board> boardList = this.boardService.getBoardAll();
 		model.addAttribute(boardList);
+
+		model.addAttribute("count", 5);
 		
-		return "board";
+		return pagePrefix + "board";
 	}
 
-	@GetMapping("/dashboard")
-	public String dashboard(HttpServletRequest request, Model model) {
+	@GetMapping("/about")
+	public String about(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("username") == null) {
-			return "sign";
+			return pagePrefix + "sign";
 		}
 		
-		List<Board> boardList = this.boardService.getBoardAll();
-		model.addAttribute(boardList);
-		
-		return "dashboard";
+		model.addAttribute("count", 3);
+
+		return pagePrefix + "about";
 	}
 
-	@GetMapping("/contact")
-	public String contact(HttpServletRequest request, Model model) {
-		HttpSession session = request.getSession();
-		if(session.getAttribute("username") == null) {
-			return "sign";
-		}
+	@GetMapping("/test")
+	public String test(HttpServletRequest request, Model model) {
 		
-		List<Board> boardList = this.boardService.getBoardAll();
-		model.addAttribute(boardList);
-		
-		return "contact";
+		return pagePrefix + "test";
 	}
 }

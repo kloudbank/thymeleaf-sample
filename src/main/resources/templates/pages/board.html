@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Default Layout Import-->
+<html lang="en"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{common/layouts/defaultLayout}"
+	layout:fragment="Content"
+>
+<body>
+	<!-- Sidebar-->
+	<div th:replace="common/fragments/sidebar :: SidebarFragment"></div>
+	
+	<div id="page-content-wrapper">
+	<!-- Board -->
+		<div class="container-fluid">
+			<h1>Board</h1>
+			<table class="table">
+				<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Title</th>
+					<th scope="col">User ID</th>
+					<th scope="col">Created</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr th:each="board : ${boardList}">
+					<th th:text="${board.id}"></th>
+					<td th:text="${board.title}"></th>
+					<td th:text="${board.userid}"></th>
+					<td th:text="${board.createdAt}"></th>
+				</tr>
+				</tbody>
+			</table>	
+		</div>
+	</div>
+</body>
+</html>
