@@ -40,7 +40,7 @@ $('#signinBtn').click(function (self) {
   var account = JSON.stringify(accountTemp);
 
   $.ajax({
-    url: '/v1/login'
+    url: '/v1/account/login'
     , type: 'POST'
     , dataType: 'json'
     , contentType: 'application/json; charset=UTF-8'

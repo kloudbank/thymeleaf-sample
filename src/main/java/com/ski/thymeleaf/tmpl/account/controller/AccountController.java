@@ -21,7 +21,7 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-	@PostMapping("/login")
+	@PostMapping("/account/login")
 	public Account login(HttpServletRequest request
 					, @RequestBody Account account) throws Exception {
 		
